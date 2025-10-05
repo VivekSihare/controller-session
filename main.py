@@ -1,3 +1,14 @@
+def on_update():
+    # If *any* controller button is being pressed...
+    if controller.any_button.is_pressed():
+        # Change background to blue (color index 9)
+        scene.set_background_color(9)
+    else:
+        # Otherwise, set it back to purple (color index 7)
+        scene.set_background_color(7)
+
+# This event runs continuously in the background
+game.on_update(on_update)
 # �� Direction buttons
 
 def on_up_pressed():

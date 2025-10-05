@@ -69,3 +69,14 @@ player2 = sprites.create(img`
     . . . . f f f f f . . . . . 
     `, SpriteKind.Player)
 player2.setPosition(110, 60)
+// This event runs continuously in the background
+game.onUpdate(function () {
+    // If *any* controller button is being pressed...
+    if (controller.anyButton.isPressed()) {
+        // Change background to blue (color index 9)
+        scene.setBackgroundColor(9)
+    } else {
+        // Otherwise, set it back to purple (color index 7)
+        scene.setBackgroundColor(7)
+    }
+})
